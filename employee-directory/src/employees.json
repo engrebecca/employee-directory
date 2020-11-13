@@ -1,18 +1,82 @@
 [
     {
-        "firstname": "",
-        "lastname": "",
-        "email": "",
-        "position": "",
-        "phone": "",
-        "image": ""
+        "firstname": "Michael",
+        "lastname": "Scott",
+        "email": "michael@dundermiffilin.com",
+        "position": "Regional Manager",
+        "department": "Management",
+        "image": "https://static.wikia.nocookie.net/theoffice/images/b/be/Character_-_MichaelScott.PNG/revision/latest/top-crop/width/360/height/360?cb=20200413224550"
     },
     {
-        "firstname": "",
-        "lastname": "",
-        "email": "",
-        "position": "",
-        "phone": "",
-        "image": ""
+        "firstname": "Jim",
+        "lastname": "Halpert",
+        "email": "jim@dundermiffilin.com",
+        "position": "Assistant Regional Manager",
+        "department": "Management",
+        "image": "https://static.wikia.nocookie.net/theoffice/images/e/e9/Character_-_JimHalpert.PNG/revision/latest/top-crop/width/360/height/360?cb=20200414162003"
     },
+    {
+        "firstname": "Dwight",
+        "lastname": "Schrute",
+        "email": "dwight@dundermiffilin.com",
+        "position": "Sales Representative",
+        "department": "Sales",
+        "image": "https://static.wikia.nocookie.net/theoffice/images/c/c5/Dwight_.jpg/revision/latest?cb=20170701082424"
+    },
+    {
+        "firstname": "Phyllis",
+        "lastname": "Smith",
+        "email": "phyllis@dundermiffilin.com",
+        "position": "Sales Representative",
+        "department": "Sales",
+        "image": "https://starcasm.net/wp-content/uploads/2012/08/phyllis1-490x654.png"
+    },
+    {
+        "firstname": "Ryan",
+        "lastname": "Howard",
+        "email": "ryan@dundermiffilin.com",
+        "position": "Sales Representative",
+        "department": "Sales",
+        "image": "https://static.wikia.nocookie.net/theoffice/images/e/e0/Character_-_RyanHoward.PNG/revision/latest/top-crop/width/360/height/360?cb=20200414174545"
+    },
+    {
+        "firstname": "Pam",
+        "lastname": "Beesly",
+        "email": "pam@dundermiffilin.com",
+        "position": "Receptionist",
+        "department": "People",
+        "image": "https://static.wikia.nocookie.net/theoffice/images/6/67/Pam_Beesley.jpg/revision/latest/top-crop/width/360/height/360?cb=20170701084358"
+    },
+    {
+        "firstname": "Kevin",
+        "lastname": "Malone",
+        "email": "kevin@dundermiffilin.com",
+        "position": "Accountant",
+        "department": "Accounting",
+        "image": "https://static.wikia.nocookie.net/theoffice/images/b/b2/2009Kevincropped.PNG/revision/latest?cb=20170701083657"
+    },
+    {
+        "firstname": "Angela",
+        "lastname": "Martin",
+        "email": "angela@dundermiffilin.com",
+        "position": "Accountant",
+        "department": "Accounting",
+        "image": "https://upload.wikimedia.org/wikipedia/en/0/0b/Angela_Martin.jpg"
+    },
+    {
+        "firstname": "Oscar",
+        "lastname": "Martinez",
+        "email": "oscar@dundermiffilin.com",
+        "position": "Accountant",
+        "department": "Accounting",
+        "image": "https://upload.wikimedia.org/wikipedia/en/5/54/Oscar_Martinez_of_The_Office.jpg"
+    },
+    {
+        "firstname": "Kely",
+        "lastname": "Kapoor",
+        "email": "kelly@dundermiffilin.com",
+        "position": "Customer Service Representative",
+        "department": "Customer Service",
+        "image": "https://static.wikia.nocookie.net/theoffice/images/6/69/Kelly_Kapoor.jpg/revision/latest?cb=20170701090501"
+    }
 ]
