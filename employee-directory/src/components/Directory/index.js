@@ -3,12 +3,12 @@ import EmployeeContext from "../../utils/employeeContext";
 // import "./style.css";
 
 function Directory() {
-    const { employees } = useContext(EmployeeContext);
+    const employees = useContext(EmployeeContext);
 
     // Returns a row for each employee in the directory
-    return (
-        employees.map(employee => (
-            <div className="container">
+    return (<>
+        {employees.map((employee, i) => (
+            <div className="container" key={i}>
                 <div className="row">
                     <div className="col-2">
                         <img src={employee.image} alt={employee.firstname}></img>
@@ -30,7 +30,7 @@ function Directory() {
                     </div>
                 </div>
             </div>
-        ))
+        ))}</>
     );
 }
 

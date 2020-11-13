@@ -12,15 +12,16 @@ function App() {
 
     useEffect(() => {
         setEmployees(Employees)
-    }, [employees]);
+    }, []);
 
-    // function to sort the employees array to be in alphabetical order by last name
+    // function to sort the employees array to be grouped by department
 
-    // function to filter employees array based on employee department
+    // function to filter employees array based on employee name
 
-    // function to handle button click to sort employees in alphabetical order
+    // function to handle form submit from user to sort directory based on selected department
 
-    // function to handle form submit from user to filter directory based on selected department
+    // function to handle button click to filter employees in alphabetical order
+
 
     return (
         <div>
@@ -29,31 +30,7 @@ function App() {
                 <Header></Header>
                 {/* Section that renders all employees from employees.json */}
                 <EmployeeContext.Provider value={employees}>
-                    {employees.map(employee => (
-                        <div className="container">
-                            <div className="row" id={employee.id} alt={employee.firstname}>
-                                <div className="col-2">
-                                    <img src={employee.image}></img>
-                                </div>
-                                <div className="col-2">
-                                    {employee.firstname}
-                                </div>
-                                <div className="col-2">
-                                    {employee.lastname}
-                                </div>
-                                <div className="col-2">
-                                    {employee.position}
-                                </div>
-                                <div className="col-2">
-                                    {employee.department}
-                                </div>
-                                <div className="col-2">
-                                    {employee.email}
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                    {/* <Directory></Directory> */}
+                    <Directory></Directory>
                 </EmployeeContext.Provider>
             </Wrapper>
         </div >
