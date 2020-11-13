@@ -6,12 +6,13 @@ import Header from "./components/Header";
 
 function App() {
     return (
-        <Wrapper>
+        <div>
             <Navbar></Navbar>
-            <Container>
+            <Wrapper>
                 <Header></Header>
-            </Container>
-        </Wrapper>
+                {/* Section that renders all employees from employees.json */}
+            </Wrapper>
+        </div>
     );
 }
 
