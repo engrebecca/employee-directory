@@ -31,7 +31,7 @@ function App() {
                 <EmployeeContext.Provider value={employees}>
                     {employees.map(employee => (
                         <div className="container">
-                            <div className="row" id={employee.id}>
+                            <div className="row" id={employee.id} alt={employee.firstname}>
                                 <div className="col-2">
                                     <img src={employee.image}></img>
                                 </div>
@@ -56,7 +56,7 @@ function App() {
                     {/* <Directory></Directory> */}
                 </EmployeeContext.Provider>
             </Wrapper>
-        </div>
+        </div >
     );
 }
 
