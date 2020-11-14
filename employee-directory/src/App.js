@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Wrapper from "./components/Wrapper";
-import Navbar from "./components/Navbar";
+import Jumbotron from "./components/Jumbotron";
 import Container from "./components/Container";
 import Header from "./components/Header";
 import Employees from "./employees.json"
@@ -28,7 +28,7 @@ function App() {
 
     return (
         <div>
-            <Navbar></Navbar>
+            <Jumbotron></Jumbotron>
             <Container>
                 {/* Input field for first name to filter by, updates filter to be the user's input */}
                 <div className="input-group mb-3">
