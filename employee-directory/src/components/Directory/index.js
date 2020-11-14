@@ -5,7 +5,7 @@ import EmployeeContext from "../../utils/employeeContext";
 function Directory() {
     const employees = useContext(EmployeeContext);
 
-    // Returns a row for each employee in the directory
+    // Returns a row for each employee in the employees array which can be updated based on a user set filter or sort
     return (<>
         {employees.map((employee, i) => (
             <div className="container" key={i}>
