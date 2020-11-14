@@ -6,7 +6,7 @@
         "email": "michael@dundermiffilin.com",
         "position": "Regional Manager",
         "department": "Management",
-        "image": "https://via.placeholder.com/100"
+        "image": "https://upload.wikimedia.org/wikipedia/en/d/dc/MichaelScott.png"
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "email": "jim@dundermiffilin.com",
         "position": "Assistant Regional Manager",
         "department": "Management",
-        "image": "https://via.placeholder.com/100"
+        "image": "https://img.cinemablend.com/filter:scale/quill/0/e/2/6/e/4/0e26e41934123ce014d29353fe4dcead8cb60619.jpg?mw=600"
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "email": "dwight@dundermiffilin.com",
         "position": "Sales Representative",
         "department": "Sales",
-        "image": "https://via.placeholder.com/100"
+        "image": "https://upload.wikimedia.org/wikipedia/en/c/cd/Dwight_Schrute.jpg"
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "email": "phyllis@dundermiffilin.com",
         "position": "Sales Representative",
         "department": "Sales",
-        "image": "https://via.placeholder.com/100"
+        "image": "https://starcasm.net/wp-content/uploads/2012/08/phyllis1-490x654.png"
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
         "email": "ryan@dundermiffilin.com",
         "position": "Sales Representative",
         "department": "Sales",
-        "image": "https://via.placeholder.com/100"
+        "image": "https://media2.s-nbcnews.com/j/streams/2012/June/120627/434210-120627-ent-bjnovak-vmed.fit-760w.jpg"
     },
     {
         "id": 6,
@@ -51,7 +51,7 @@
         "email": "pam@dundermiffilin.com",
         "position": "Receptionist",
         "department": "People",
-        "image": "https://via.placeholder.com/100"
+        "image": "https://cdn.costumewall.com/wp-content/uploads/2018/09/pam-beesly.jpg"
     },
     {
         "id": 7,
@@ -60,7 +60,7 @@
         "email": "kevin@dundermiffilin.com",
         "position": "Accountant",
         "department": "Accounting",
-        "image": "https://via.placeholder.com/100"
+        "image": "https://pbs.twimg.com/profile_images/762958606199320576/WEa6ttXr_400x400.jpg"
     },
     {
         "id": 8,
@@ -69,7 +69,7 @@
         "email": "angela@dundermiffilin.com",
         "position": "Accountant",
         "department": "Accounting",
-        "image": "https://via.placeholder.com/100"
+        "image": "https://akns-images.eonline.com/eol_images/Entire_Site/2018716/rs_600x600-180816112005-600.angela-the-office.ct.081618.jpg?fit=around|1200:1200&output-quality=90&crop=1200:1200;center,top"
     },
     {
         "id": 9,
@@ -78,7 +78,7 @@
         "email": "oscar@dundermiffilin.com",
         "position": "Accountant",
         "department": "Accounting",
-        "image": "https://via.placeholder.com/100"
+        "image": "https://i.pinimg.com/originals/ed/73/b6/ed73b64b3a545549cfb3ead6f32388f8.jpg"
     },
     {
         "id": 10,
@@ -87,6 +87,6 @@
         "email": "kelly@dundermiffilin.com",
         "position": "Customer Service Representative",
         "department": "Customer Service",
-        "image": "https://via.placeholder.com/100"
+        "image": "https://i.pinimg.com/originals/8e/e4/26/8ee426c9225e90dd38b46e0cbb65d16d.png"
     }
 ]

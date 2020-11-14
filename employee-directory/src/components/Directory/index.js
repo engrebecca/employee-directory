@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import EmployeeContext from "../../utils/employeeContext";
-// import "./style.css";
+import "./style.css";
 
 function Directory() {
     const employees = useContext(EmployeeContext);
@@ -11,7 +11,8 @@ function Directory() {
             <div className="container" key={i}>
                 <div className="row">
                     <div className="col-2">
-                        <img src={employee.image} alt={employee.firstname}></img>
+                        <img src={employee.image} alt={employee.firstname} className="img-thumbnail"></img>
+                        {/* <div className="img-thumbnail" style={{ backgroundImage: `url(${employee.image})` }}></div> */}
                     </div>
                     <div className="col-2">
                         {employee.firstname}
@@ -30,7 +31,8 @@ function Directory() {
                     </div>
                 </div>
             </div>
-        ))}</>
+        ))
+        }</>
     );
 }
 
