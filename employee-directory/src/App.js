@@ -9,6 +9,7 @@ import EmployeeContext from "./utils/employeeContext";
 
 function App() {
     const [employees, setEmployees] = useState([]);
+    const [filter, setFilter] = useState("")
 
     useEffect(() => {
         setEmployees(Employees)
@@ -22,14 +23,16 @@ function App() {
 
     // function to handle button click to filter employees in alphabetical order
 
+    const filterRegExp = new RegExp(filter, "i");
 
     return (
         <div>
             {/* <Navbar></Navbar> */}
+            <input type="text" value={filter} onChange={(e) => setFilter(e.target.value)} />
             <Wrapper>
                 <Header></Header>
                 {/* Section that renders all employees from employees.json */}
-                <EmployeeContext.Provider value={employees}>
+                <EmployeeContext.Provider value={employees.filter((employee) => filterRegExp.test(employee.firstname))}>
                     <Directory></Directory>
                 </EmployeeContext.Provider>
             </Wrapper>
