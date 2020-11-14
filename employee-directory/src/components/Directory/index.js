@@ -14,19 +14,19 @@ function Directory() {
                         <img src={employee.image} alt={employee.firstname} className="img-thumbnail"></img>
                         {/* <div className="img-thumbnail" style={{ backgroundImage: `url(${employee.image})` }}></div> */}
                     </div>
-                    <div className="col-2">
+                    <div className="col-2 center-text">
                         {employee.firstname}
                     </div>
-                    <div className="col-2">
+                    <div className="col-2 center-text">
                         {employee.lastname}
                     </div>
-                    <div className="col-2">
+                    <div className="col-2 center-text">
                         {employee.position}
                     </div>
-                    <div className="col-2">
+                    <div className="col-2 center-text">
                         {employee.department}
                     </div>
-                    <div className="col-2">
+                    <div className="col-2 center-text">
                         {employee.email}
                     </div>
                 </div>

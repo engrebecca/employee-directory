@@ -7,3 +7,10 @@
     object-fit: cover;
     margin: 38px;
 }
+
+.center-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid;
+}
