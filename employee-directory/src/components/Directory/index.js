@@ -8,7 +8,7 @@ function Directory() {
     // Returns a row for each employee in the employees array which can be updated based on a user set filter or sort
     return (<>
         {employees.map((employee, i) => (
-            <div className="container" key={i}>
+            <main className="container" key={i}>
                 <div className="row">
                     <div className="col-2 center-text">
                         <img src={employee.image} alt={employee.firstname} className="img-thumbnail"></img>
@@ -29,7 +29,7 @@ function Directory() {
                         {employee.email}
                     </div>
                 </div>
-            </div>
+            </main>
         ))
         }</>
     );
