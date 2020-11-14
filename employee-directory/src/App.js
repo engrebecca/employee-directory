@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Wrapper from "./components/Wrapper";
-// import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
 // import Container from "./components/Container";
 import Header from "./components/Header";
 import Employees from "./employees.json"
@@ -31,7 +31,7 @@ function App() {
 
     return (
         <div>
-            {/* <Navbar></Navbar> */}
+            <Navbar></Navbar>
             <input type="text" value={filter} onChange={(e) => setFilter(e.target.value)} />
             <select value={fieldToSortBy} onChange={(e) => setFieldToSortBy(e.target.value)}>
                 {fields.map(({ key, text }) => (<option key={key} value={key}>{text}</option>))}
