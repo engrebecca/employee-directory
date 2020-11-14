@@ -5,11 +5,11 @@ The head office of Dunder Mifflin determined their leaders would benefit from an
 
 ## Features
 * React is used to create the application and the user interface components
-    * There are separate components for the wrapper, jumbotron, container, header, and directory
+    * There are separate components for the wrapper, jumbotron, container, header, directory, filter, order field, and sort field
     * App.js is a stateful component that imports all the other components
     * Multiple useState hooks are utilized to access and update the state of the employee list, filter selection, sort field selection, and sort order selection
     * A useEffect hook is utilized to set the initial rendered employee list to the contents of the employees.json file
-    * The Context API is utilized to pass data from the EmployeeContext Provider to it's child, the Directory component, in order to render employee information. It passes the employee state and the ability to sort and filter employees.
+    * The Context API is utilized to pass data from Providers to their child Consumers. For example, the EmployeeContext provides to it's child, the Directory component, in order to render employee information. It passes the employee state and the ability to sort and filter employees.
 
 
 ## Built With
