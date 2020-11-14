@@ -1,9 +1,6 @@
 .img-thumbnail{
     width:  100px;
     height: 100px;
-    /* background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover; */
     object-fit: cover;
     margin: 38px;
 }
@@ -12,5 +9,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: solid;
+    border-bottom: solid;
 }

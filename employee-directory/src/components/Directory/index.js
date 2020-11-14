@@ -10,9 +10,8 @@ function Directory() {
         {employees.map((employee, i) => (
             <div className="container" key={i}>
                 <div className="row">
-                    <div className="col-2">
+                    <div className="col-2 center-text">
                         <img src={employee.image} alt={employee.firstname} className="img-thumbnail"></img>
-                        {/* <div className="img-thumbnail" style={{ backgroundImage: `url(${employee.image})` }}></div> */}
                     </div>
                     <div className="col-2 center-text">
                         {employee.firstname}
