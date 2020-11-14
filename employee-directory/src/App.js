@@ -12,7 +12,8 @@ const fields = [{ key: "firstname", text: "First Name" }, { key: "lastname", tex
 function App() {
     const [employees, setEmployees] = useState([]);
     const [filter, setFilter] = useState("")
-    const [sortField, setSortField] = useState("firstname");
+    const [fieldToSortBy, setFieldToSortBy] = useState("firstname");
+    const [sortOrder, setSortOrder] = useState(1);
 
     useEffect(() => {
         setEmployees(Employees)
@@ -32,19 +33,24 @@ function App() {
         <div>
             {/* <Navbar></Navbar> */}
             <input type="text" value={filter} onChange={(e) => setFilter(e.target.value)} />
-            <select value={sortField} onChange={(e) => setSortField(e.target.value)}>
+            <select value={fieldToSortBy} onChange={(e) => setFieldToSortBy(e.target.value)}>
                 {fields.map(({ key, text }) => (<option key={key} value={key}>{text}</option>))}
+            </select>
+            <select value={sortOrder} onChange={(e) => setSortOrder(+e.target.value)}>
+                <option value={1}>Asc</option>
+                <option value={-1}>Desc</option>
             </select>
             <Wrapper>
                 <Header></Header>
                 {/* Section that renders all employees from employees.json */}
-                <EmployeeContext.Provider value={employees
-                    .filter((employee) => filterRegExp.test(employee.firstname))
-                    .sort((a, b) => {
-                        if (a[sortField] < b[sortField]) return -1
-                        if (a[sortField] > b[sortField]) return 1
-                        return 0
-                    })
+                <EmployeeContext.Provider value={
+                    employees
+                        .filter((employee) => filterRegExp.test(employee.firstname))
+                        .sort((a, b) => {
+                            if (a[fieldToSortBy] < b[fieldToSortBy]) return -sortOrder
+                            if (a[fieldToSortBy] > b[fieldToSortBy]) return sortOrder
+                            return 0
+                        })
                 }>
                     <Directory></Directory>
                 </EmployeeContext.Provider>
