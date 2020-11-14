@@ -10,6 +10,8 @@ import FilterContext from "./utils/filterContext";
 import Filter from "./components/Filter";
 import SortContext from "./utils/sortContext";
 import Sort from "./components/SortField";
+import OrderContext from "./utils/orderContext";
+import Order from "./components/OrderField";
 
 // Array that holds all the field names of the employee directory, to reference for filtering and sorting
 const fields = [{ key: "firstname", text: "First Name" }, { key: "lastname", text: "Last Name" }, { key: "position", text: "Position" }, { key: "department", text: "Department" }, { key: "email", text: "Email" }]
@@ -30,12 +32,19 @@ function App() {
     // Creating a RegExp that is the first name that must be matched in the name filter
     const filterRegExp = new RegExp(filter, "i");
 
+    // Updates filter value to user input whenever there is a change to value in the input field
     function handleFilterInput(e) {
         setFilter(e.target.value)
     };
 
+    // Updates fieldToSortBy to user input whenever there is a change to the value in the drop down menu
     function handleSortInput(e) {
         setFieldToSortBy(e.target.value)
+    };
+
+    // Updates sortOrder to user input whenever there is a change to the value in the drop down menu
+    function handleSortOrder(e) {
+        setSortOrder(+e.target.value)
     };
 
     return (
@@ -50,11 +59,11 @@ function App() {
                     {/* Drop down menu for field to sort by, updates fieldToSortBy to be user's input*/}
                     <Sort></Sort>
                 </SortContext.Provider>
-                {/* Drop down menu for selecting sort order, updates sortOrder to be the user's input*/}
-                <select className="form-control" value={sortOrder} onChange={(e) => setSortOrder(+e.target.value)}>
-                    <option value={1}>A-Z</option>
-                    <option value={-1}>Z-A</option>
-                </select>
+
+                <OrderContext.Provider value={{ sortOrder, handleSortOrder }}>
+                    {/* Drop down menu for selecting sort order, updates sortOrder to be the user's input*/}
+                    <Order></Order>
+                </OrderContext.Provider>
             </Container>
             <Wrapper>
                 <Header></Header>
