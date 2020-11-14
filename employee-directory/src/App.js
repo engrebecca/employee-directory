@@ -35,7 +35,7 @@ function App() {
                     <div className="input-group-prepend">
                         <span className="input-group-text" id="inputGroup-sizing-default">Filter by Name</span>
                     </div>
-                    <input type="text" className="form-control" placeholder="Enter Employee First Name" value={filter} onChange={(e) => setFilter(e.target.value)} />
+                    <input type="text" className="form-control" placeholder="Enter First Name" value={filter} onChange={(e) => setFilter(e.target.value)} />
                 </div>
                 {/* Drop down menu for field to sort by, updates fieldToSortBy to be user's input*/}
                 <select className="form-control" value={fieldToSortBy} onChange={(e) => setFieldToSortBy(e.target.value)}>
