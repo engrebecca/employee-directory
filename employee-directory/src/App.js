@@ -8,6 +8,8 @@ import Directory from "./components/Directory";
 import EmployeeContext from "./utils/employeeContext";
 import FilterContext from "./utils/filterContext";
 import Filter from "./components/Filter";
+import SortContext from "./utils/sortContext";
+import Sort from "./components/SortField";
 
 // Array that holds all the field names of the employee directory, to reference for filtering and sorting
 const fields = [{ key: "firstname", text: "First Name" }, { key: "lastname", text: "Last Name" }, { key: "position", text: "Position" }, { key: "department", text: "Department" }, { key: "email", text: "Email" }]
@@ -30,7 +32,11 @@ function App() {
 
     function handleFilterInput(e) {
         setFilter(e.target.value)
-    }
+    };
+
+    function handleSortInput(e) {
+        setFieldToSortBy(e.target.value)
+    };
 
     return (
         <div>
@@ -40,10 +46,10 @@ function App() {
                     {/* Input field for first name to filter by, updates filter to be the user's input */}
                     <Filter></Filter>
                 </FilterContext.Provider>
-                {/* Drop down menu for field to sort by, updates fieldToSortBy to be user's input*/}
-                <select className="form-control" value={fieldToSortBy} onChange={(e) => setFieldToSortBy(e.target.value)}>
-                    {fields.map(({ key, text }) => (<option key={key} value={key}>{text}</option>))}
-                </select>
+                <SortContext.Provider value={{ fieldToSortBy, fields, handleSortInput }}>
+                    {/* Drop down menu for field to sort by, updates fieldToSortBy to be user's input*/}
+                    <Sort></Sort>
+                </SortContext.Provider>
                 {/* Drop down menu for selecting sort order, updates sortOrder to be the user's input*/}
                 <select className="form-control" value={sortOrder} onChange={(e) => setSortOrder(+e.target.value)}>
                     <option value={1}>A-Z</option>
