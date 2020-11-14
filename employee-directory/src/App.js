@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import Employees from "./employees.json"
 import Directory from "./components/Directory";
 import EmployeeContext from "./utils/employeeContext";
+import FilterContext from "./utils/filterContext";
+import Filter from "./components/Filter";
 
 // Array that holds all the field names of the employee directory, to reference for filtering and sorting
 const fields = [{ key: "firstname", text: "First Name" }, { key: "lastname", text: "Last Name" }, { key: "position", text: "Position" }, { key: "department", text: "Department" }, { key: "email", text: "Email" }]
@@ -26,17 +28,18 @@ function App() {
     // Creating a RegExp that is the first name that must be matched in the name filter
     const filterRegExp = new RegExp(filter, "i");
 
+    function handleFilterInput(e) {
+        setFilter(e.target.value)
+    }
+
     return (
         <div>
             <Jumbotron></Jumbotron>
             <Container>
-                {/* Input field for first name to filter by, updates filter to be the user's input */}
-                <div className="input-group mb-3">
-                    <div className="input-group-prepend">
-                        <span className="input-group-text" id="inputGroup-sizing-default">Filter by Name</span>
-                    </div>
-                    <input type="text" className="form-control" placeholder="Enter First Name" value={filter} onChange={(e) => setFilter(e.target.value)} />
-                </div>
+                <FilterContext.Provider value={{ filter, handleFilterInput }}>
+                    {/* Input field for first name to filter by, updates filter to be the user's input */}
+                    <Filter></Filter>
+                </FilterContext.Provider>
                 {/* Drop down menu for field to sort by, updates fieldToSortBy to be user's input*/}
                 <select className="form-control" value={fieldToSortBy} onChange={(e) => setFieldToSortBy(e.target.value)}>
                     {fields.map(({ key, text }) => (<option key={key} value={key}>{text}</option>))}
